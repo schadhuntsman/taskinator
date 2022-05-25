@@ -101,12 +101,14 @@ var taskButtonHandler = function (event) {
     var taskID = event.target.getAttribute("data-task-id");
   console.log(taskID);
     console.log("You clicked a delete button!");
-  }
+  
   
   console.log(event.target);
 
   var deleteTask = function(taskID) {
-    console.log(taskId);
+    var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
+    console.log(taskSelected);
+  };
   
     if (event.target.matches.getAttribute("data-task-id"));
     delete(taskId);
