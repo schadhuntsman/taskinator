@@ -95,23 +95,15 @@ formEl.addEventListener("submit", taskFormHandler);
 
 var pageContentEl = document.querySelector("#page-content");
 
-var taskButtonHandler = function (event) {
-  if (event.taget.matches(".delete-btn")) {
-    //get the element's task id
-    var taskID = event.target.getAttribute("data-task-id");
-  console.log(taskID);
-    console.log("You clicked a delete button!");
+var taskButtonHandler = function(event) {
+  // get target element from event
+  var targetEl = event.target;
+}
+  // edit button was clicked
+  var editTask = function(taskId) {
+    console.log("editing task #" + taskId);
   
-  
-  console.log(event.target);
-
-  var deleteTask = function(taskID) {
+    // get task list item element
     var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
-    console.log(taskSelected);
   };
-  
-    if (event.target.matches.getAttribute("data-task-id"));
-    delete(taskId);
-  }
-};
 pageContentEl.addEventListener("click", taskButtonHandler);
