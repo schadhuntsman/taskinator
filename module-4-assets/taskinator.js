@@ -228,8 +228,11 @@ var tasks = [
   }
 ];
 var saveTasks = function () {
-  localStorage.setItem("tasks", tasks);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+var loadTasks = localStorage.getItem("select[name='tasks'])");
+
+
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
 
@@ -238,3 +241,5 @@ pageContentEl.addEventListener("click", taskButtonHandler);
 
 // for changing the status
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
+
+// ("select[name='task-type']")
